@@ -9,7 +9,7 @@ except ImportError:  # Graceful fallback if IceCream isn't installed.
 
 
 def generatePassword(
-        uppercase=True, lowercase=True, numbers=True, symbols=False, length=8):
+        uppercase=True, lowercase=True, numbers=True, symbols=False, length=12):
     password = ''
     alphabet = ''
 
@@ -47,12 +47,11 @@ if __name__ == '__main__':
         args[k] for k in ['--no-lowercase', '--no-minuscule', '--no-miniscule'])
     numbers = not args['--no-numbers']
     symbols = not args['--no-symbols']
-    length = int(args.get('--len') or 8)
+    length = int(args.get('--len') or 12)
     copyToClipboard = not args['--dont-copy']
 
     password = generatePassword(uppercase, lowercase, numbers, symbols, length)
-    ic(password)
+    print(password)
 
     if copyToClipboard:
         pyperclip.copy(password)
-

@@ -29,7 +29,7 @@ Options:
   --no-miniscule                 Common typo for --no-minuscule. (default: false)
   -n, --no-numbers               Exclude numbers. (default: false)
   -s, --no-symbols               Exclude special symbols. (default: false)
-  -l <length>, --len <length>    Password length (default: 12).
+  -l <length>, --len <length>    Password length (default: 8).
   -c, --dont-copy                Don't copy the password to the clipboard. (default: false)
   -h, --help                     Show this help message and exit.
 
