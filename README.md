@@ -1,4 +1,7 @@
 # Password-generator
+
+<img scr="https://github.com/Nenogzar/Password-generator/blob/main/gen.jpg" alt="Password" width="300">
+
 make a strong password that will be automatically copied to the clipboard
 
 
