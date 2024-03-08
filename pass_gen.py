@@ -13,6 +13,7 @@ Options:
   -c, --dont-copy                Don't copy the password to the clipboard. (default: false)
   -h, --help                     Show this help message and exit.
 """
+
 import tkinter as tk
 from tkinter import messagebox
 import random

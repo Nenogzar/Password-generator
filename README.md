@@ -43,7 +43,19 @@ Examples:
   $ generate-password -s -l 8 -c
   BxSuSL14  # copied to the clipboard
 ```
+> #### Options
+> 
 
+`-u`-> Exclude uppercase letters. Default uppercase included.<br>
+`-m`->  Exclude lowercase letters. Default lowercase included.<br>
+`-n`->  Exclude numbers. Default numbers included.<br>
+`-s`->  Exclude special symbols. Default symbols included.<br>
+`-c`->  Don't copy the password to the clipboard. Default password copied.<br>
+`-l`->  Password length. Default 12.<br>
+
+> For each character set included, at least one character from the generated password is used. For example, if executed with `-u` to exclude uppercase letters
+
+> #### the generated password will then include at least one symbol, at least one lowercase letter and at least one number .
 
 </body>
 </html>
