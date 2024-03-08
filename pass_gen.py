@@ -18,10 +18,7 @@ import random
 import string
 import pyperclip
 from docopt import docopt
-try:
-    from icecream import ic
-except ImportError:  # Graceful fallback if IceCream isn't installed.
-    ic = lambda *a: None if not a else (a[0] if len(a) == 1 else a)  # noqa
+# from icecream import ic
 
 
 def generatePassword(
@@ -45,13 +42,16 @@ def generatePassword(
     if not alphabet:
         raise ValueError('You must enable at least one character set.')
 
+    # ic(alphabet)
+    # ic(password)
+
     remainingLength = length - len(password)
     if remainingLength <= 0:
         return password
 
     password += ''.join(random.choice(alphabet) for _ in range(remainingLength))
     password = ''.join(random.sample(password, len(password)))  # shuffle
-
+    # ic(password)
     return password
 
 
@@ -65,6 +65,10 @@ if __name__ == '__main__':
     symbols = not args['--no-symbols']
     length = int(args.get('--len') or 8)
     copyToClipboard = not args['--dont-copy']
+
+    # ic(uppercase, lowercase, numbers, symbols, length)
+
+
 
     password = generatePassword(uppercase, lowercase, numbers, symbols, length)
     print(password)
