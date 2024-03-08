@@ -12,18 +12,6 @@ Options:
   -l <length>, --len <length>    Password length (default: 8).
   -c, --dont-copy                Don't copy the password to the clipboard. (default: false)
   -h, --help                     Show this help message and exit.
-
-Examples:
-  $ generate-password
-  TEm{m3{;Csvm
-
-  $ generate-password -s -l 4
-  Va9U
-
-  $ generate-password -s -l 8 -c
-  BxSuSL14  # copied to the clipboard
-
-
 """
 
 import random
