@@ -13,7 +13,8 @@ Options:
   -c, --dont-copy                Don't copy the password to the clipboard. (default: false)
   -h, --help                     Show this help message and exit.
 """
-
+import tkinter as tk
+from tkinter import messagebox
 import random
 import string
 import pyperclip
@@ -72,6 +73,12 @@ if __name__ == '__main__':
 
     password = generatePassword(uppercase, lowercase, numbers, symbols, length)
     print(password)
+
+    root = tk.Tk()
+    root.withdraw()
+
+    messagebox.showinfo("Password-generator", f"You password is: \n{password}")
+
 
     if copyToClipboard:
         pyperclip.copy(password)
