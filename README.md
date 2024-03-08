@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body style="background-color: #0d1117; color: white;">
+
 # Password-generator
 
 <div id="badges" align="center">
