@@ -1,3 +1,31 @@
+"""
+Usage:
+  generate-password [-u] [-m] [-n] [-s] [-l <length>] [-c] [options]
+
+Options:
+  -u, --no-uppercase             Exclude uppercase letters. (default: false)
+  -m, --no-minuscule             Exclude miniscule/lowercase letters. (default: false)
+  --no-lowercase                 Another name for -m or --no-minuscule. (default: false)
+  --no-miniscule                 Common typo for --no-minuscule. (default: false)
+  -n, --no-numbers               Exclude numbers. (default: false)
+  -s, --no-symbols               Exclude special symbols. (default: false)
+  -l <length>, --len <length>    Password length (default: 8).
+  -c, --dont-copy                Don't copy the password to the clipboard. (default: false)
+  -h, --help                     Show this help message and exit.
+
+Examples:
+  $ generate-password
+  TEm{m3{;Csvm
+
+  $ generate-password -s -l 4
+  Va9U
+
+  $ generate-password -s -l 8 -c
+  BxSuSL14  # copied to the clipboard
+
+
+"""
+
 import random
 import string
 import pyperclip
@@ -9,7 +37,7 @@ except ImportError:  # Graceful fallback if IceCream isn't installed.
 
 
 def generatePassword(
-        uppercase=True, lowercase=True, numbers=True, symbols=False, length=12):
+        uppercase=True, lowercase=True, numbers=True, symbols=False, length=8):
     password = ''
     alphabet = ''
 
@@ -47,7 +75,7 @@ if __name__ == '__main__':
         args[k] for k in ['--no-lowercase', '--no-minuscule', '--no-miniscule'])
     numbers = not args['--no-numbers']
     symbols = not args['--no-symbols']
-    length = int(args.get('--len') or 12)
+    length = int(args.get('--len') or 8)
     copyToClipboard = not args['--dont-copy']
 
     password = generatePassword(uppercase, lowercase, numbers, symbols, length)
