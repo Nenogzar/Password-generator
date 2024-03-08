@@ -1,6 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="background-color: #0d1117; color: white;">
 # Password-generator
 
-<img scr="https://github.com/Nenogzar/Password-generator/blob/main/gen.jpg" alt="Password" width="300">
+<div id="badges" align="center">
+<img src="https://github.com/Nenogzar/Password-generator/blob/main/gen.jpg" alt="Password" height="300"  >
+</div>
 
 make a strong password that will be automatically copied to the clipboard
 
@@ -32,3 +42,7 @@ Examples:
   $ generate-password -s -l 8 -c
   BxSuSL14  # copied to the clipboard
 ```
+
+
+</body>
+</html>
