@@ -20,7 +20,7 @@ import random
 import string
 import pyperclip
 from docopt import docopt
-# from icecream import ic
+from icecream import ic
 
 
 def generatePassword(
@@ -52,7 +52,8 @@ def generatePassword(
         return password
 
     password += ''.join(random.choice(alphabet) for _ in range(remainingLength))
-    password = ''.join(random.sample(password, len(password)))  # shuffle
+    # ic(password)
+    password = ''.join(random.sample(password, len(password)))
     # ic(password)
     return password
 
@@ -78,7 +79,7 @@ if __name__ == '__main__':
     root = tk.Tk()
     root.withdraw()
 
-    messagebox.showinfo("Password-generator", f"You password is: \n{password}")
+    messagebox.showinfo("Password-generator", f"Your password is: \n{password}")
 
 
     if copyToClipboard:
